@@ -1,0 +1,16 @@
+let api = 'key-XXXXXXXXXXXXXXXXXXXXXX';
+let domain = 'https://api.eu.mailgun.net/v3/develop.ulpanbot.ru';
+
+mailgun = require('mailgun-js')({ apiKey: api, domain });
+
+const data = {
+  from: 'postmaster@develop.ulpanbot.ru',
+  to: 'goo.kambl4@gmail.com',
+  subject: 'Test email subject',
+  text: 'Test email text'
+};
+ 
+mailgun.messages().send(data, function (error, body) {
+  console.log(error);
+  console.log(body);
+});
