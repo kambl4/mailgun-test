@@ -11,6 +11,6 @@ const data = {
 };
  
 mailgun.messages().send(data, function (error, body) {
-  console.log('Mailgun-js error: ', error);
-  console.log('Mailgun-js body: ', body);
+  console.log('Mailgun-js error: ', error); // undefined
+  console.log('Mailgun-js body: ', body); // also undefined
 });
