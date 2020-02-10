@@ -1,4 +1,4 @@
-let api = 'key-XXXXXXXXXXXXXXXXXXXXXX';
+let api = 'key-XXXXXXXXXXXXXXXXXXXXXX'; // change this!!!
 let domain = 'https://api.eu.mailgun.net/v3/develop.ulpanbot.ru';
 
 mailgun = require('mailgun-js')({ apiKey: api, domain });
@@ -11,6 +11,6 @@ const data = {
 };
  
 mailgun.messages().send(data, function (error, body) {
-  console.log(error);
-  console.log(body);
+  console.log('Mailgun-js error: ', error);
+  console.log('Mailgun-js body: ', body);
 });
